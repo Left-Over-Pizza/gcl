@@ -2,6 +2,7 @@ package io.ph.bot;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.PropertiesConfiguration;
@@ -112,7 +113,7 @@ public class Bot {
 	}
 
 	public class APIKeys {
-		private HashMap<String, String> keys = new HashMap<String, String>();
+		private Map<String, String> keys = new HashMap<String, String>();
 
 		/**
 		 * Get API key for given key
