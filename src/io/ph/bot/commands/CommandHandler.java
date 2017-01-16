@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
 
 import io.ph.bot.model.Guild;
 import io.ph.bot.model.Permission;
-import io.ph.util.Util;
 import sx.blah.discord.handle.obj.IMessage;
 
 /**
@@ -108,9 +107,7 @@ public class CommandHandler {
 			if(cmd == null)
 				return;
 			if(getCommand(cmd).hasPermissions(msg)) {
-				if(Util.userHasPermission(msg.getAuthor(), msg.getGuild(), Permission.KICK)) {
-					getCommand(cmd).executeCommand(msg);
-				}
+				getCommand(cmd).executeCommand(msg);
 			}
 		} else {
 			String cmd = aliasToDefaultMap.get(msg.getContent().substring(g.getGuildConfig().getCommandPrefix().length(),
@@ -118,9 +115,7 @@ public class CommandHandler {
 			if(cmd == null)
 				return;
 			if(getCommand(cmd).hasPermissions(msg)) {
-				if(Util.userHasPermission(msg.getAuthor(), msg.getGuild(), Permission.KICK)) {
-					getCommand(cmd).executeCommand(msg);
-				}
+				getCommand(cmd).executeCommand(msg);
 			}
 		}
 	}
